@@ -1,7 +1,7 @@
 apiVersion: provisioning.cattle.io/v1
 kind: Cluster
 metadata:
-  name: harvester-k3s-prod
+  name: hhg-k3s-up
   namespace: fleet-default
 spec:
   # Define the K3s version here (v1.35.9+k3s1)
