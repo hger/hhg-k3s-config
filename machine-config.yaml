@@ -26,9 +26,13 @@ networkInfo: |
       }
     ]
   }
-sshUser: ubuntu
+sshUser: demo
 userData: |
   #cloud-config
+  user: demo
+  password: password
+  chpasswd: { expire: False }
+  ssh_pwauth: True
   package_update: true
   packages:
     - qemu-guest-agent
