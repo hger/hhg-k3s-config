@@ -7,12 +7,13 @@ metadata:
 vmNamespace: default
 cpuCount: "2"
 memorySize: "4"
-# The Harvester VM Image is specified inside diskInfo as "<image-namespace>/<image-name>"
+#  default/image-8pgjc leap-16.0
+# default/image-xxsqt leap-15.6
 diskInfo: |
   {
     "disks": [
       {
-        "imageName": "default/image-xxsqt",
+        "imageName": "default/image-8pgjc",
         "bootOrder": 1,
         "size": 40
       }
