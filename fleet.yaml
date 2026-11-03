@@ -1,0 +1,5 @@
+defaultNamespace: fleet-default
+helm:
+  releaseName: k3s-harvester-cluster
+targets:
+  - clusterName: local

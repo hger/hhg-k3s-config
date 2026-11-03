@@ -1,0 +1,28 @@
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+metadata:
+  name: harvester-k3s-prod
+  namespace: fleet-default
+spec:
+  # Define the K3s version here (must end in +k3sX)
+  kubernetesVersion: v1.35.9+k3s1
+
+  # Cloud credential for the imported Harvester cluster in Rancher
+  cloudCredentialSecretName: "cattle-global-data:cc-2rs9n"
+
+  rkeConfig:
+    machinePools:
+      - name: hhg-k3s
+        controlPlaneRole: true
+        etcdRole: true
+        workerRole: true
+        quantity: 1
+        machineConfigRef:
+          apiVersion: rke-machine-config.cattle.io/v1
+          kind: HarvesterConfig
+          name: hhg-k3s-harvester-pool
+
+    # Harvester Cloud Provider integration for K3s
+    chartValues:
+      harvester-cloud-provider:
+        cloudConfigPath: /var/lib/rancher/k3s/etc/config-files/cloud-provider-config

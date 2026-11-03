@@ -1,0 +1,36 @@
+apiVersion: rke-machine-config.cattle.io/v1
+kind: HarvesterConfig
+metadata:
+  name: hhg-k3s-harvester-pool
+  namespace: fleet-default
+# Namespace within Harvester where VMs are scheduled
+vmNamespace: default
+cpuCount: "2"
+memorySize: "4"
+# The Harvester VM Image is specified inside diskInfo as "<image-namespace>/<image-name>"
+diskInfo: |
+  {
+    "disks": [
+      {
+        "imageName": "default/image-xxsqt",
+        "bootOrder": 1,
+        "size": 40
+      }
+    ]
+  }
+networkInfo: |
+  {
+    "interfaces": [
+      {
+        "networkName": "default/net66"
+      }
+    ]
+  }
+sshUser: ubuntu
+userData: |
+  #cloud-config
+  package_update: true
+  packages:
+    - qemu-guest-agent
+  runcmd:
+    - systemctl enable --now qemu-guest-agent
