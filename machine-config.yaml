@@ -14,7 +14,7 @@ diskInfo: |
   {
     "disks": [
       {
-        "imageName": "default/image-xxsqt",
+        "imageName": "images/image-2fq8t",
         "bootOrder": 1,
         "size": 40
       }
