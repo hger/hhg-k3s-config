@@ -24,7 +24,7 @@ networkInfo: |
   {
     "interfaces": [
       {
-        "networkName": "default/net66"
+        "networkName": "haven/vmnet"
       }
     ]
   }
