@@ -13,7 +13,7 @@ diskInfo: |
   {
     "disks": [
       {
-        "imageName": "default/image-8pgjc",
+        "imageName": "default/image-xxsqt",
         "bootOrder": 1,
         "size": 40
       }
