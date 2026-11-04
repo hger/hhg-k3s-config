@@ -14,7 +14,7 @@ diskInfo: |
   {
     "disks": [
       {
-        "imageName": "images/image-2fq8t",
+        "imageName": "default/image-xxsqt",
         "bootOrder": 1,
         "size": 40
       }
@@ -24,7 +24,7 @@ networkInfo: |
   {
     "interfaces": [
       {
-        "networkName": "haven/vmnet"
+        "networkName": "default/net66"
       }
     ]
   }

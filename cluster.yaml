@@ -8,10 +8,10 @@ metadata:
 spec:
   # previous(v1.34.12+k3s1)
   # latest(v1.35.9+k3s1)
-  kubernetesVersion: v1.35.9+k3s1
+  kubernetesVersion: v1.34.12+k3s1
 
-  #cloudCredentialSecretName: "cattle-global-data:cc-2rs9n" secret 
-  cloudCredentialSecretName: "cattle-global-data:cc-c2j6b" #north 
+  cloudCredentialSecretName: "cattle-global-data:cc-2rs9n" #secret 
+  #cloudCredentialSecretName: "cattle-global-data:cc-c2j6b" #north 
   rkeConfig:
     machinePools:
       - name: hhg-k3s
